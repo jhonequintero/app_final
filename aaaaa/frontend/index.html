@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+  rel="stylesheet">
+
+<body>
+  <div id="particles-js"></div>
+  <section>
+    <div class="contenedor_principal">
+      <div class="contenedor_secciones">
+        <img id="imagen_" src="img/Logo.png" alt="">
+
+      </div>
+
+      <div class="contenedor_botones">
+
+        <!-- Botón Iniciar Sesión -->
+        <div class="contenedor">
+          <span class="tooltip">Iniciar Sesión</span>
+          <img id="imagen_2" src="img/Captura_de_pantalla_2025-04-02_073035-removebg-preview.png" alt="Iniciar Sesión"
+            onclick="abrirPopup('inicioSesion')">
+
+        </div>
+
+       
+
+    </div>
+  </section>
+
+<!-- Ventana Emergente para Iniciar Sesión -->
+<div id="inicioSesion" class="popup">
+    <div class="popup-contenido">
+      <img id="imagen_3" src="img/Captura_de_pantalla_2025-04-03_081700-removebg-preview.png" alt="Logo">
+  
+      <span class="cerrar" onclick="cerrarPopup('inicioSesion')">&times;</span>
+  
+      <div class="contenedor-central">
+  
+        <!-- Vista de inicio para TRABAJADOR -->
+<div id="vistaTrabajador" class="contenedor_centrado_info">
+    <form method="POST" action="/login">
+      <p class="titulo">Iniciar Sesión - Trabajador</p><br>
+      <input type="hidden" name="tipo" value="trabajador">
+  
+      <div class="info_correo">
+        <div class="form__group field">
+          <input name="correo" type="text" class="form__field" placeholder="Correo Electrónico" required>
+          <label class="form__label">Correo Electrónico</label>
+        </div>
+      </div>
+  
+      <div class="info_contrasena">
+        <div class="form__group field">
+          <input name="contrasena" type="password" class="form__field" placeholder="Contraseña" required>
+          <label class="form__label">Contraseña</label>
+        </div>
+      </div>
+  
+     
+  
+      <div class="boton_ingresar">
+        <button type="submit" class="animated-button">
+          <span>Ingresar</span>
+          <span></span>
+        </button>
+        <p class="admin_p" onclick="cambiarVista('admin')">Ingresar como Admin</p>
+      </div>
+    </form>
+  </div>
+  
+  <!-- Vista de inicio para ADMIN -->
+  <div id="vistaAdmin" class="contenedor_centrado_info" style="display: none;">
+    <form method="POST" action="/login">
+      <p class="titulo">Iniciar Sesión - Admin</p><br>
+      <input type="hidden" name="tipo" value="admin">
+  
+      <div class="info_correo">
+        <div class="form__group field">
+          <input name="correo" type="text" class="form__field" placeholder="Correo Admin" required>
+          <label class="form__label">Correo Admin</label>
+        </div>
+      </div>
+  
+      <div class="info_contrasena">
+        <div class="form__group field">
+          <input name="contrasena" type="password" class="form__field" placeholder="Contraseña Admin" required>
+          <label class="form__label">Contraseña Admin</label>
+        </div>
+      </div>
+  
+  
+      <div class="boton_ingresar">
+        <button type="submit" class="animated-button">
+          <span>Ingresar</span>
+          <span></span>
+        </button>
+        <p onclick="cambiarVista('trabajador')" style="color: white; cursor: pointer;">Ingresar como trabajador</p>
+      </div>
+    </form>
+  </div>
+  
+  
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+  <!-- footer pie de encabezado -->
+  <footer>
+    <div class="footer">
+      <p>Todos los derechos reservados</p>
+      <p>© 2023</p>
+      <p>Todos los derechos reservados</p>
+      <p>© 2023</p>
+      <p>Todos los derechos reservados</p>
+      <p>© 2023</p>
+    </div>
+
+  </footer>
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="script/Script.js"></script>
+</body>
+
+</html>
