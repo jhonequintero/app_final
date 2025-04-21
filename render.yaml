@@ -3,13 +3,13 @@ services:
     name: miapp
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app:app"
+    startCommand: "gunicorn wsgi:app"
     envVars:
       - key: DB_HOST
-        value: tu-host-de-mysql
+        value: containers-us-west-123.railway.app  # Reemplaza por el host real de tu BD en la nube
       - key: DB_USER
-        value: tu-usuario
+        value: root
       - key: DB_PASSWORD
-        value: tu-contraseña
+        value: jhoneiderquintero12345@
       - key: DB_NAME
-        value: tu-base-de-datos
+        value: miapp
