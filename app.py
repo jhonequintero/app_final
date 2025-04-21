@@ -5,12 +5,11 @@ import mysql.connector
 
 app = Flask(__name__, template_folder='frontend', static_folder='frontend')
 
-# Conexión usando variables de entorno
 db = mysql.connector.connect(
-    host=os.environ.get("DB_HOST", "localhost"),
-    user=os.environ.get("DB_USER", "root"),
-    password=os.environ.get("DB_PASSWORD", "jhoneiderquintero12345@"),
-    database=os.environ.get("DB_NAME", "miapp")
+    host=os.getenv("DB_HOST"),  # Obtenemos la variable de entorno DB_HOST
+    user=os.getenv("DB_USER"),  # Obtenemos la variable de entorno DB_USER
+    password=os.getenv("DB_PASSWORD"),  # Obtenemos la variable de entorno DB_PASSWORD
+    database=os.getenv("DB_NAME")  # Obtenemos la variable de entorno DB_NAME
 )
 
 @app.route('/')
