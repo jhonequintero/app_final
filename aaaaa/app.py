@@ -9,7 +9,7 @@ app = Flask(__name__, template_folder='frontend', static_folder='frontend')
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="jhoneiderquintero12345@",  # Coloca tu contraseña si tienes
+    password="jhoneiderquintero12345@", 
     database="miapp"
 )
 
@@ -45,6 +45,8 @@ def login():
             return jsonify({'success': False, 'mensaje': 'No hay trabajadores registrados con estas credenciales'})
 
     return jsonify({'success': False, 'mensaje': 'Tipo de usuario no válido'})
+
+
 
 # Ruta para el panel de administrador
 @app.route('/panel_admin')

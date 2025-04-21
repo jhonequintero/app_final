@@ -91,7 +91,7 @@ body {
 }
 
 .contenedor_botones {
-    background-color: green;
+    background-color: transparent;
     width: 43em;
     display: flex;
     gap: 33%;
@@ -244,7 +244,7 @@ body {
 }
 
 .contenedor_centrado_info {
-    background-color: red;
+    background-color: transparent;
     width: 50%;
     height: auto;
     position: relative;

@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: miapp
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: DB_HOST
+        value: tu-host-de-mysql
+      - key: DB_USER
+        value: tu-usuario
+      - key: DB_PASSWORD
+        value: tu-contraseña
+      - key: DB_NAME
+        value: tu-base-de-datos
